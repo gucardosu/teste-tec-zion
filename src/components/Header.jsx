@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logo from "../assets/logo-host.svg";
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
     >
       <div className="w-full max-w-[1440px] flex items-center justify-between px-12 py-6">
         <div className="flex items-center">
-          <span className="text-3xl font-bold text-[#003454]">HØST</span>
+          <img src={logo} alt="Host logo" className="h-8" />
         </div>
 
         <div className="flex items-center gap-10">
