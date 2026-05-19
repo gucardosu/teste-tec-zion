@@ -14,14 +14,16 @@ export default function WhatsAppButton() {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="absolute bottom-10 right-12 flex items-center gap-4 group pointer-events-auto"
         >
-          {/* O balão de texto */}
           <div className="bg-[#CCA349]/90 backdrop-blur-sm text-white text-[15px] font-medium px-6 py-3 rounded-full shadow-lg transition-transform hover:-translate-x-1 whitespace-nowrap">
             Como podemos te ajudar?
           </div>
 
-          <div className="bg-[#CCA349] w-16 h-16 rounded-full flex items-center justify-center shadow-xl shadow-[#CCA349]/40 hover:scale-110 transition-transform">
-            {/* O ícone do Zap - AUMENTADO de w-7 h-7 para w-9 h-9 */}
-            <img src={zapIcon} alt="WhatsApp" className="w-9 h-9" />
+          <div className="bg-[#CCA349] w-16 h-16 rounded-full flex items-center justify-center shadow-xl shadow-[#CCA349]/40 hover:scale-110 transition-transform overflow-hidden">
+            <img
+              src={zapIcon}
+              alt="WhatsApp"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.a>
       </div>
