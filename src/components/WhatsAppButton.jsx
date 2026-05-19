@@ -3,10 +3,10 @@ import zapIcon from "../assets/zap.svg";
 
 export default function WhatsAppButton() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[999] flex justify-center pointer-events-none">
+    <div className="absolute inset-x-0 bottom-0 z-50 flex justify-center pointer-events-none">
       <div className="w-full max-w-[1440px] h-32 relative">
         <motion.a
-          href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre as soluções da HØST."
+          href="https://wa.me/5511999999999"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, scale: 0.5 }}
@@ -18,12 +18,14 @@ export default function WhatsAppButton() {
             Como podemos te ajudar?
           </div>
 
-          <div className="bg-[#CCA349] w-16 h-16 rounded-full flex items-center justify-center shadow-xl shadow-[#CCA349]/40 hover:scale-110 transition-transform overflow-hidden">
-            <img
-              src={zapIcon}
-              alt="WhatsApp"
-              className="w-full h-full object-cover"
-            />
+          <div className="bg-[#e4c478] w-16 h-16 rounded-full flex items-center justify-center shadow-xl shadow-[#CCA349]/40 hover:scale-110 transition-transform">
+            <div className="bg-[#CCA349] w-11 h-11 rounded-full flex items-center justify-center shadow-inner relative">
+              <img
+                src={zapIcon}
+                alt="WhatsApp"
+                className="w-8 h-8 object-contain"
+              />
+            </div>
           </div>
         </motion.a>
       </div>

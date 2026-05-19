@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Hero() {
   return (
     <section className="w-full flex justify-center relative overflow-hidden min-h-[85vh]">
-      <div className="w-full max-w-[1440px] flex flex-col md:flex-row items-center justify-between px-12 py-20 relative">
+      <div className="w-full max-w-[1440px] flex flex-col md:flex-row items-center justify-between px-12 py-20 relative z-10">
         <div className="md:w-1/2 flex flex-col gap-6 z-10">
           <motion.h1
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl lg:text-[56px] font-bold text-[#003454] leading-[1.1] max-w-[650px]"
+            className="text-5xl lg:text-[56px] font-bold text-[#003454] leading-[1.1] max-w-[550px]"
           >
             Tudo o que o seu negócio precisa, com eficiência e simplicidade!
           </motion.h1>
@@ -51,6 +52,8 @@ export default function Hero() {
           />
         </div>
       </div>
+
+      <WhatsAppButton />
     </section>
   );
 }
