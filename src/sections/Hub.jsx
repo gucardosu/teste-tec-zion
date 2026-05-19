@@ -20,7 +20,7 @@ export default function Hub() {
             Menos fornecedores. Mais resultado.
           </h3>
 
-          <div className="flex flex-col gap-4 text-[#333] text-[17px] leading-[1.8]">
+          <div className="flex flex-col gap-4 text-[#666666] text-[17px] leading-[1.8]">
             <p>
               Um HUB é um ponto central que conecta tudo o que você precisa. Ele
               reduz distâncias, elimina complicações e faz com que todo o seu
@@ -48,22 +48,22 @@ export default function Hub() {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            <div className="relative h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/5">
+            <div className="relative h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/10">
               <img
                 src={card1}
                 alt="Assinatura"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#003454]/90 via-[#003454]/40 to-transparent"></div>
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <h4 className="text-white font-bold text-xl leading-tight relative z-10 transition-transform duration-300 group-hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#003454]/90 via-transparent to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <h4 className="text-white font-bold text-2xl leading-tight relative z-10 transition-transform duration-300 group-hover:-translate-y-2">
                   Assinatura de
                   <br />
                   Equipamentos
                 </h4>
                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out relative z-10">
                   <div className="overflow-hidden">
-                    <p className="text-white/90 text-sm leading-snug pt-2">
+                    <p className="text-white/95 text-sm leading-snug pt-3 font-medium">
                       Máquinas modernas, sem custo de aquisição, com manutenção
                       inclusa para mais segurança e eficiência.
                     </p>
@@ -72,22 +72,22 @@ export default function Hub() {
               </div>
             </div>
 
-            <div className="relative h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/5">
+            <div className="relative h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/10">
               <img
                 src={card2}
                 alt="Direcionamento"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#CCA349]/90 via-[#CCA349]/40 to-transparent"></div>
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <h4 className="text-white font-bold text-xl leading-tight relative z-10 transition-transform duration-300 group-hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#CCA349]/90 via-transparent to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <h4 className="text-white font-bold text-2xl leading-tight relative z-10 transition-transform duration-300 group-hover:-translate-y-2">
                   Direcionamento
                   <br />
                   Estratégico
                 </h4>
                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out relative z-10">
                   <div className="overflow-hidden">
-                    <p className="text-white/90 text-sm leading-snug pt-2">
+                    <p className="text-white/95 text-sm leading-snug pt-3 font-medium">
                       Análise profunda do seu negócio para traçar rotas de
                       crescimento, otimizar custos e maximizar seus lucros no
                       setor.
@@ -97,22 +97,22 @@ export default function Hub() {
               </div>
             </div>
 
-            <div className="relative h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/5">
+            <div className="relative h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/10">
               <img
                 src={card3}
                 alt="Comunidade"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#003454]/90 via-[#003454]/40 to-transparent"></div>
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <h4 className="text-white font-bold text-xl leading-tight relative z-10 transition-transform duration-300 group-hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#003454]/90 via-transparent to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <h4 className="text-white font-bold text-2xl leading-tight relative z-10 transition-transform duration-300 group-hover:-translate-y-2">
                   Comunidade
                   <br />
                   HØST
                 </h4>
                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out relative z-10">
                   <div className="overflow-hidden">
-                    <p className="text-white/90 text-sm leading-snug pt-2">
+                    <p className="text-white/95 text-sm leading-snug pt-3 font-medium">
                       Conecte-se com outros empreendedores do setor de
                       alimentação, troque experiências e acesse conteúdos
                       exclusivos.
@@ -122,22 +122,22 @@ export default function Hub() {
               </div>
             </div>
 
-            <div className="relative h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/5">
+            <div className="relative h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/10">
               <img
                 src={card4}
                 alt="Gestão"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#CCA349]/90 via-[#CCA349]/40 to-transparent"></div>
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <h4 className="text-white font-bold text-xl leading-tight relative z-10 transition-transform duration-300 group-hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#CCA349]/90 via-transparent to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <h4 className="text-white font-bold text-2xl leading-tight relative z-10 transition-transform duration-300 group-hover:-translate-y-2">
                   Gestão de
                   <br />
                   Serviços
                 </h4>
                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out relative z-10">
                   <div className="overflow-hidden">
-                    <p className="text-white/90 text-sm leading-snug pt-2">
+                    <p className="text-white/95 text-sm leading-snug pt-3 font-medium">
                       Terceirização e controle de serviços essenciais para que
                       você possa focar 100% na qualidade do seu atendimento.
                     </p>
@@ -146,21 +146,21 @@ export default function Hub() {
               </div>
             </div>
 
-            <div className="relative h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/5">
+            <div className="relative h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-lg shadow-black/10">
               <img
                 src={card5}
                 alt="Estruturação"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#003454]/90 via-[#003454]/40 to-transparent"></div>
-              <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <h4 className="text-white font-bold text-xl leading-tight relative z-10 transition-transform duration-300 group-hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#003454]/90 via-transparent to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <h4 className="text-white font-bold text-2xl leading-tight relative z-10 transition-transform duration-300 group-hover:-translate-y-2">
                   Estruturação e<br />
                   Direcionamento
                 </h4>
                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out relative z-10">
                   <div className="overflow-hidden">
-                    <p className="text-white/90 text-sm leading-snug pt-2">
+                    <p className="text-white/95 text-sm leading-snug pt-3 font-medium">
                       Apoio completo desde a planta arquitetônica até o fluxo
                       operacional para garantir a máxima eficiência da sua
                       cozinha.
