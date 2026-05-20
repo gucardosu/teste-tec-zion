@@ -42,7 +42,8 @@ export default function Header() {
             </a>
           </nav>
 
-          <button className="bg-[#CCA349] hover:brightness-110 text-white text-sm font-semibold px-8 py-2.5 rounded-full transition-all">
+          {/* Sombra preta adicionada com shadow-lg e shadow-black/30 */}
+          <button className="bg-[#CCA349] hover:brightness-110 text-white text-sm font-semibold px-8 py-2.5 rounded-full transition-all shadow-lg shadow-black/30">
             CONTATO
           </button>
         </div>

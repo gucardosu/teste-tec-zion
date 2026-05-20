@@ -16,17 +16,17 @@ export default function JourneyPoint({
       viewport={{ once: true, amount: 0.5 }}
       className={`absolute ${dotPosition} z-10`}
     >
-      <div className="absolute -translate-x-1/2 -translate-y-1/2 bg-[#003454] w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-default z-20">
-        <span className="text-white font-extrabold text-xl">{number}</span>
+      <div className="absolute -translate-x-1/2 -translate-y-1/2 bg-[#003454] w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-default z-20">
+        <span className="text-white font-extrabold text-base">{number}</span>
       </div>
 
       <div
-        className={`absolute ${textPosition} ${textAlign} w-[260px] flex flex-col gap-1.5`}
+        className={`absolute ${textPosition} ${textAlign} w-[220px] flex flex-col gap-1 pointer-events-none`}
       >
-        <h4 className="text-[#003454] font-bold text-[17px] leading-tight">
+        <h4 className="text-[#003454] font-bold text-[15px] leading-tight">
           {title}
         </h4>
-        <p className="text-[#534C49] text-[13px] leading-snug">{description}</p>
+        <p className="text-[#534C49] text-[12px] leading-snug">{description}</p>
       </div>
     </motion.div>
   );
