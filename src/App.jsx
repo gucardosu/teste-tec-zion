@@ -3,6 +3,7 @@ import Hero from './sections/Hero';
 import Hub from './sections/Hub';
 import Journey from './sections/Journey';
 import Testimonials from './sections/Testimonials';
+import FinalSection from './sections/FinalSection';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Hub />
       <Journey />
       <Testimonials />
+      <FinalSection />
     </div>
   )
 }

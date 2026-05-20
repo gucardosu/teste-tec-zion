@@ -76,45 +76,50 @@ export default function Testimonials() {
             Negócios que <br />
             simplificaram com a <span className="text-[#CCA349]">HØST</span>
           </h2>
-          <div className="relative w-full overflow-hidden min-h-[460px] md:min-h-[400px]">
+          
+          <div className="relative w-full overflow-hidden -mx-4 px-4 py-8">
             <motion.div
-              className="flex gap-6 w-full"
-              animate={{ x: `-${currentIndex * 50}%` }}
+              className="flex w-full [--items-per-page:1] md:[--items-per-page:2]"
+              animate={{ x: `calc(-${currentIndex} * (100% / var(--items-per-page)))` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               {depoimentos.map((item) => (
                 <div
                   key={item.id}
-                  // Adicionado shadow-2xl e shadow-black/10 para uma sombra bem definida nos cards
-                  className="bg-white rounded-[24px] p-8 md:p-10 shadow-2xl shadow-black/10 min-w-[100%] md:min-w-[calc(50%-12px)] max-w-[100%] md:max-w-[calc(50%-12px)] flex flex-col justify-between border border-gray-100"
+                  className="shrink-0 px-4 flex"
+                  style={{ width: "calc(100% / var(--items-per-page))" }}
                 >
-                  <div>
-                    <div className="flex items-center gap-4 mb-5">
-                      <div className="w-14 h-14 bg-[#111] rounded-full flex items-center justify-center text-white shrink-0 shadow-inner">
-                        <svg className="w-7 h-7 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
+                  {/* Sombra removida aqui */}
+                  <div className="bg-white rounded-[24px] p-8 md:p-10 flex flex-col justify-between border border-gray-50 w-full h-full">
+                    <div>
+                      <div className="flex items-center gap-4 mb-5">
+                        <div className="w-14 h-14 bg-[#111] rounded-full flex items-center justify-center text-white shrink-0 shadow-inner">
+                          <svg className="w-7 h-7 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col">
+                          <h4 className="text-[#003454] font-bold text-lg leading-tight font-sans">{item.nome}</h4>
+                          <span className="text-gray-400 text-xs mt-0.5 font-medium">{item.cargo}</span>
+                        </div>
                       </div>
-                      <div className="flex flex-col">
-                        <h4 className="text-[#003454] font-bold text-lg leading-tight font-sans">{item.nome}</h4>
-                        <span className="text-gray-400 text-xs mt-0.5 font-medium">{item.cargo}</span>
+                      <div className="flex gap-1 mb-5">
+                        {[...Array(item.estrelas)].map((_, i) => (
+                          <svg key={i} className="w-[18px] h-[18px] text-[#CCA349]" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
                       </div>
+                      <p className="text-[#534C49] text-[14.5px] leading-relaxed font-normal tracking-wide text-left">
+                        {item.texto}
+                      </p>
                     </div>
-                    <div className="flex gap-1 mb-5">
-                      {[...Array(item.estrelas)].map((_, i) => (
-                        <svg key={i} className="w-[18px] h-[18px] text-[#CCA349]" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-                    <p className="text-[#534C49] text-[14.5px] leading-relaxed font-normal tracking-wide text-left">
-                      {item.texto}
-                    </p>
                   </div>
                 </div>
               ))}
             </motion.div>
           </div>
+          
           <div className="flex items-center gap-4 mt-2">
             <button onClick={prevSlide} className="w-9 h-9 rounded-full border border-gray-400 flex items-center justify-center text-[#003454] text-sm hover:bg-[#003454] hover:text-white hover:border-[#003454] transition-all duration-300">
               &#10094;
@@ -159,7 +164,7 @@ export default function Testimonials() {
       </div>
       
       {/* FAIXA INFERIOR BRANCA */}
-      <div className="w-full bg-white py-8 border-t border-gray-200/60 overflow-hidden relative mt-auto flex items-center z-10">
+      <div className="w-full bg-white py-4 border-t border-gray-200/60 overflow-hidden relative mt-auto flex items-center z-10">
         <div className="w-full relative flex overflow-x-hidden">
           <motion.div
             className="flex whitespace-nowrap items-center shrink-0 min-w-full"
@@ -168,15 +173,15 @@ export default function Testimonials() {
           >
             <div className="flex gap-16 md:gap-24 items-center pr-16 md:pr-24 shrink-0">
               {carouselLogos.map((logo, index) => (
-                <div key={`bloco1-${index}`} className="h-16 flex items-center justify-center transition-transform hover:scale-110 duration-300">
-                  <img src={logo.src} alt={logo.name} className="h-full max-w-[160px] object-contain" />
+                <div key={`bloco1-${index}`} className="h-24 flex items-center justify-center transition-transform hover:scale-110 duration-300">
+                  <img src={logo.src} alt={logo.name} className="h-full max-w-[220px] object-contain" />
                 </div>
               ))}
             </div>
             <div className="flex gap-16 md:gap-24 items-center pr-16 md:pr-24 shrink-0">
               {carouselLogos.map((logo, index) => (
-                <div key={`bloco2-${index}`} className="h-16 flex items-center justify-center transition-transform hover:scale-110 duration-300">
-                  <img src={logo.src} alt={logo.name} className="h-full max-w-[160px] object-contain" />
+                <div key={`bloco2-${index}`} className="h-24 flex items-center justify-center transition-transform hover:scale-110 duration-300">
+                  <img src={logo.src} alt={logo.name} className="h-full max-w-[220px] object-contain" />
                 </div>
               ))}
             </div>
