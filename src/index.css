@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  font-size: 87.5%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-image: url('./assets/bg-texture.svg');
-  background-size: cover;
+  background-size: 1000px; 
   color: #534C49;
+  overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+main {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
