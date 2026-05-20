@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import WhatsAppButton from "../components/WhatsAppButton";
+import bussolaImg from "../assets/relogio home.png";
 
 export default function Hero() {
   return (
@@ -46,7 +47,7 @@ export default function Hero() {
             initial={{ scale: 0.8, opacity: 0, rotate: -45 }}
             animate={{ scale: 1, opacity: 1, rotate: -20 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            src="/src/assets/relogio home.png"
+            src={bussolaImg}
             alt="Bússola Dourada HØST"
             className="max-w-none absolute w-[500px] md:w-[700px] lg:w-[950px] -right-12 md:-right-24 lg:-right-40 top-1/2 -translate-y-1/2 drop-shadow-[-15px_25px_30px_rgba(0,0,0,0.45)] object-contain"
           />
