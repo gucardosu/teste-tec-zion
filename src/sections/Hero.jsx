@@ -26,7 +26,8 @@ export default function Hero() {
             que te entende, direciona e conecta o seu negócio às melhores
             soluções em equipamentos, serviços e gestão. <br />
             <br />
-            <strong className="text-[#003454] font-bold">
+            {/* Cor do texto ajustada para #534C49 */}
+            <strong className="text-[#534C49] font-bold">
               Aqui você resolve tudo em um só lugar.
             </strong>
           </motion.p>
@@ -36,7 +37,8 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <button className="bg-[#CCA349] hover:brightness-110 text-white font-semibold px-8 py-3.5 rounded-full transition-all mt-4 w-fit shadow-lg shadow-[#CCA349]/30">
+            {/* Sombra preta adicionada ao botão */}
+            <button className="bg-[#CCA349] hover:brightness-110 text-white font-semibold px-8 py-3.5 rounded-full transition-all mt-4 w-fit shadow-lg shadow-black/30">
               Conheça o HUB HØST
             </button>
           </motion.div>
