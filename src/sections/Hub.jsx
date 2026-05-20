@@ -10,17 +10,17 @@ export default function Hub() {
       id="o-que-fazemos"
       className="w-full bg-white flex justify-center relative z-20 overflow-hidden"
     >
-      <div className="w-full max-w-[1440px] px-10 py-16 flex flex-col gap-12">
+      <div className="w-full max-w-[1440px] px-6 md:px-10 py-12 md:py-16 flex flex-col gap-8 md:gap-12">
         <div className="flex flex-col gap-4 max-w-[800px]">
-          <h2 className="text-3xl font-extrabold text-[#11374A]">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#11374A]">
             O HUB <span className="text-[#CCA349]">HØST</span>
           </h2>
 
-          <h3 className="text-xl font-bold text-[#CCA349]">
+          <h3 className="text-lg md:text-xl font-bold text-[#CCA349]">
             Menos fornecedores. Mais resultado.
           </h3>
 
-          <div className="flex flex-col gap-3 text-[#666666] text-[15px] leading-[1.6]">
+          <div className="flex flex-col gap-3 text-[#666666] text-sm md:text-[15px] leading-[1.6]">
             <p>
               Um HUB é um ponto central que conecta tudo o que você precisa. Ele
               reduz distâncias, elimina complicações e faz com que todo o seu
@@ -32,20 +32,15 @@ export default function Hub() {
               serviços, equipamentos e equipes ao mesmo tempo. É por isso que
               ter um parceiro que simplifica sua operação faz toda a diferença.
             </p>
-            <p>
-              Com a HØST, você não precisa lidar com múltiplos contratos. Somos
-              a solução que faltava, conectando aquilo que seu negócio precisa
-              para crescer com mais resultados e menos esforço.
-            </p>
           </div>
         </div>
 
         <div className="flex flex-col gap-6">
-          <h3 className="text-xl font-bold text-[#003454]">
+          <h3 className="text-lg md:text-xl font-bold text-[#003454]">
             O QUE VOCÊ ENCONTRA AQUI:
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
               {
                 img: card1,
@@ -80,7 +75,7 @@ export default function Hub() {
             ].map((card, idx) => (
               <div
                 key={idx}
-                className="relative h-[400px] rounded-xl overflow-hidden group cursor-pointer shadow-md"
+                className="relative h-[350px] md:h-[400px] rounded-xl overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-shadow"
               >
                 <img
                   src={card.img}
@@ -92,10 +87,10 @@ export default function Hub() {
                 ></div>
 
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <h4 className="text-white font-bold text-xl leading-tight mb-2">
+                  <h4 className="text-white font-bold text-lg md:text-xl leading-tight mb-2">
                     {card.title}
                   </h4>
-                  <p className="text-white/90 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white/90 text-xs md:text-sm leading-relaxed md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {card.desc}
                   </p>
                 </div>

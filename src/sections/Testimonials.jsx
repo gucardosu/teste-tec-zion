@@ -48,11 +48,7 @@ const logosParceiros = [
   { id: 7, name: "Estância", src: logoEstancia },
 ];
 
-const carouselLogos = [
-  ...logosParceiros,
-  ...logosParceiros,
-  ...logosParceiros,
-];
+const carouselLogos = [...logosParceiros, ...logosParceiros, ...logosParceiros];
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,9 +58,7 @@ export default function Testimonials() {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? depoimentos.length - 2 : prev - 1
-    );
+    setCurrentIndex((prev) => (prev === 0 ? depoimentos.length - 2 : prev - 1));
   };
 
   return (
@@ -82,8 +76,7 @@ export default function Testimonials() {
         <div className="w-full lg:w-[58%] flex flex-col gap-8 relative z-10">
           <h2 className="text-3xl md:text-[40px] font-bold text-[#003454] uppercase tracking-wide leading-[1.1] font-sans">
             Negócios que <br />
-            simplificaram com a{" "}
-            <span className="text-[#CCA349]">HØST</span>
+            simplificaram com a <span className="text-[#CCA349]">HØST</span>
           </h2>
 
           <div className="relative w-full overflow-hidden -mx-3 px-3 py-5">
@@ -160,9 +153,7 @@ export default function Testimonials() {
                 <span
                   key={i}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    currentIndex === i
-                      ? "w-5 bg-[#003454]"
-                      : "w-2 bg-gray-400"
+                    currentIndex === i ? "w-5 bg-[#003454]" : "w-2 bg-gray-400"
                   }`}
                 />
               ))}
