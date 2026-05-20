@@ -50,7 +50,7 @@ export default function Hero() {
             transition={{ duration: 1.2, ease: "easeOut" }}
             src={bussolaImg}
             alt="Bússola Dourada HØST"
-            className="w-[340px] md:w-[600px] lg:w-[800px] object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.2)] md:mr-[-100px]"
+            className="w-[400px] md:w-[700px] lg:w-[950px] max-w-none object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.2)] md:mr-[-150px] lg:mr-[-200px]"
           />
         </div>
       </div>
